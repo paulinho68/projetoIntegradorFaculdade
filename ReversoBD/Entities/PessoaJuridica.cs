@@ -3,11 +3,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ReversoBD.Entities
 {
-    public class PessoaJuridica : Usuario
+    public class PessoaJuridica
     {
-        public string nomeFantasia { get; set; }
-        public string razaoSocial { get; set; }
-        public string cnpj { get; set; }
-        public Boolean analisado { get; set; }
+        public int Id { get; set; }
+        public int IdUsuario { get; set; }
+        public string NomeFantasia { get; set; }
+        public string RazaoSocial { get; set; }
+        public string CNPJ { get; set; }
+        public Boolean Analisado { get; set; }
+
+        public virtual Usuario Usuario { get; set; }
     }
 }

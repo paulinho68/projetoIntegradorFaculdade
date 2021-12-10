@@ -3,108 +3,22 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReversoBD;
 
 namespace ReversoBD.Migrations
 {
     [DbContext(typeof(ReversoContexto))]
-    partial class ReversoContextoModelSnapshot : ModelSnapshot
+    [Migration("20211210014436_PessoaJuridica")]
+    partial class PessoaJuridica
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.12");
-
-            modelBuilder.Entity("AreaInvestimentoUsuario", b =>
-                {
-                    b.Property<int>("AreasInvestimentosId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UsuariosId")
-                        .HasColumnType("int");
-
-                    b.HasKey("AreasInvestimentosId", "UsuariosId");
-
-                    b.HasIndex("UsuariosId");
-
-                    b.ToTable("AreaInvestimentoUsuario");
-                });
-
-            modelBuilder.Entity("ReversoBD.Entities.AreaInvestimento", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("area_investimento");
-                });
-
-            modelBuilder.Entity("ReversoBD.Entities.Endereco", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Bairro")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("CEP")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("Cidade")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("Complemento")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("Estado")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<int>("IdUsuario")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Logradouro")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<int>("Numero")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Pais")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("IdUsuario")
-                        .IsUnique();
-
-                    b.ToTable("endereco");
-                });
 
             modelBuilder.Entity("ReversoBD.Entities.PessoaFisica", b =>
                 {
@@ -129,15 +43,10 @@ namespace ReversoBD.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("varchar(255)");
 
-                    b.Property<int>("idTipoInvestidor")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("IdUsuario")
                         .IsUnique();
-
-                    b.HasIndex("idTipoInvestidor");
 
                     b.ToTable("pessoa_fisica");
                 });
@@ -199,23 +108,6 @@ namespace ReversoBD.Migrations
                     b.ToTable("telefone");
                 });
 
-            modelBuilder.Entity("ReversoBD.Entities.TipoInvestidor", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("tipo_investidor");
-                });
-
             modelBuilder.Entity("ReversoBD.Entities.Usuario", b =>
                 {
                     b.Property<int>("Id")
@@ -238,32 +130,6 @@ namespace ReversoBD.Migrations
                     b.ToTable("usuario");
                 });
 
-            modelBuilder.Entity("AreaInvestimentoUsuario", b =>
-                {
-                    b.HasOne("ReversoBD.Entities.AreaInvestimento", null)
-                        .WithMany()
-                        .HasForeignKey("AreasInvestimentosId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ReversoBD.Entities.Usuario", null)
-                        .WithMany()
-                        .HasForeignKey("UsuariosId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("ReversoBD.Entities.Endereco", b =>
-                {
-                    b.HasOne("ReversoBD.Entities.Usuario", "Usuario")
-                        .WithOne("Endereco")
-                        .HasForeignKey("ReversoBD.Entities.Endereco", "IdUsuario")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Usuario");
-                });
-
             modelBuilder.Entity("ReversoBD.Entities.PessoaFisica", b =>
                 {
                     b.HasOne("ReversoBD.Entities.Usuario", "Usuario")
@@ -271,14 +137,6 @@ namespace ReversoBD.Migrations
                         .HasForeignKey("ReversoBD.Entities.PessoaFisica", "IdUsuario")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.HasOne("ReversoBD.Entities.TipoInvestidor", "TipoInvestidor")
-                        .WithMany("PessoasFisicas")
-                        .HasForeignKey("idTipoInvestidor")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("TipoInvestidor");
 
                     b.Navigation("Usuario");
                 });
@@ -305,15 +163,8 @@ namespace ReversoBD.Migrations
                     b.Navigation("Usuario");
                 });
 
-            modelBuilder.Entity("ReversoBD.Entities.TipoInvestidor", b =>
-                {
-                    b.Navigation("PessoasFisicas");
-                });
-
             modelBuilder.Entity("ReversoBD.Entities.Usuario", b =>
                 {
-                    b.Navigation("Endereco");
-
                     b.Navigation("PessoaFisica");
 
                     b.Navigation("PessoaJuridica");

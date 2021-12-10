@@ -9,8 +9,8 @@ namespace ReversoBD.Entities
     public class AreaInvestimento
     {
         [Key]
-        public int codAreaInvestimento { get; set; }
-        public string nome { get; set; }
+        public int Id { get; set; }
+        public string Nome{ get; set; }
         public virtual ICollection<Usuario> Usuarios{ get; set; }
 
     }

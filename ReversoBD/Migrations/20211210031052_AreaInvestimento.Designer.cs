@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReversoBD;
 
 namespace ReversoBD.Migrations
 {
     [DbContext(typeof(ReversoContexto))]
-    partial class ReversoContextoModelSnapshot : ModelSnapshot
+    [Migration("20211210031052_AreaInvestimento")]
+    partial class AreaInvestimento
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

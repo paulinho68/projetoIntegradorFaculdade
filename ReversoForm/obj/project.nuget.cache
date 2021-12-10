@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vsiuAIP7G3SSj3YfyIR0XY5MpSXMXmnZHjJAiWGPzL6sFPpka9QmoRYU07HlEMqfP9hRHAOVQSMuEBay4LSu3g==",
+  "dgSpecHash": "umrZT6pf93/QJNVPHDvJ4dpuFSAiw6XHAuxkMx7mT9jixzJl0iOaxSiK0vwMGPaGGx+E7LeCElOCY2EC143LmQ==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\Faculdade\\4ºSemestre\\ProjetoIntegrador\\AV2\\Reverso\\ReversoForm\\ReversoForm.csproj",
+  "projectFilePath": "D:\\Projetos\\Faculdade\\4ºSemestre\\ProjetoIntegrador\\projetoIntegradorFaculdade\\ReversoForm\\ReversoForm.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\paulo\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\paulo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

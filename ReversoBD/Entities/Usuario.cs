@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ReversoBD.Entities
 { 
@@ -12,6 +10,10 @@ namespace ReversoBD.Entities
 
         public virtual ICollection<Telefone> Telefones{ get; set; }
         public virtual PessoaFisica PessoaFisica{ get; set; }
+        public virtual PessoaJuridica PessoaJuridica{ get; set; }
+        public virtual Endereco Endereco{ get; set; }
+
+        public virtual ICollection<AreaInvestimento> AreasInvestimentos { get; set; }
 
     }
 }

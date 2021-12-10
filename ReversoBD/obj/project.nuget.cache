@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vng6dX+oVozm/cSxZNsGsIDwjf/H9A0XgH9zPyuuVmgHDS/H/t/xpPUpndCCU+vxv8MvL07G30FvO8XYWW49HQ==",
+  "dgSpecHash": "CJCFMyZZFflgFIGlhIZIx1SzPpvh+xXL09QrUtIz4Vo57udcalwXbxi2LCOl02mBmcDr73W1VBrKBLLMlgChPg==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\Faculdade\\4ºSemestre\\ProjetoIntegrador\\AV2\\Reverso\\ReversoBD\\ReversoBD.csproj",
+  "projectFilePath": "D:\\Projetos\\Faculdade\\4ºSemestre\\ProjetoIntegrador\\projetoIntegradorFaculdade\\ReversoBD\\ReversoBD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\paulo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\paulo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
