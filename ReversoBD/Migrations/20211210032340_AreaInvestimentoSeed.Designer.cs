@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReversoBD;
 
 namespace ReversoBD.Migrations
 {
     [DbContext(typeof(ReversoContexto))]
-    partial class ReversoContextoModelSnapshot : ModelSnapshot
+    [Migration("20211210032340_AreaInvestimentoSeed")]
+    partial class AreaInvestimentoSeed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -246,23 +248,6 @@ namespace ReversoBD.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("tipo_investidor");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Nome = "Alto Risco"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Nome = "Médio Risco"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Nome = "Baixo Risco"
-                        });
                 });
 
             modelBuilder.Entity("ReversoBD.Entities.Usuario", b =>

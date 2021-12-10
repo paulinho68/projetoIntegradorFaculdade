@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ReversoBD.Entities;
 using ReversoBD.Mappings;
+using ReversoBD.Seeds;
+using ReversoBD.Tools;
 
 namespace ReversoBD
 {
@@ -8,8 +10,8 @@ namespace ReversoBD
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseMySql(Config.ConnectionString, new MariaDbServerVersion(Config.MariaDbVersion));
-            optionsBuilder.UseMySql("server=localhost;database=reverso;user=root;password=", new MariaDbServerVersion("10.4.19"));
+            optionsBuilder.UseMySql(Config.ConnectionString, new MariaDbServerVersion(Config.MariaDbVersion));
+            //optionsBuilder.UseMySql("server=localhost;database=reverso;user=root;password=", new MariaDbServerVersion("10.4.19"));
         }
 
         public DbSet<Usuario> Usuario { get; set; }
@@ -21,6 +23,7 @@ namespace ReversoBD
         public DbSet<TipoInvestidor> TipoInvestidor { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            //Migrations
             builder.ApplyConfiguration(new UsuarioMaps());
             builder.ApplyConfiguration(new TelefoneMaps());
             builder.ApplyConfiguration(new PessoaFisicaMaps());
@@ -28,6 +31,10 @@ namespace ReversoBD
             builder.ApplyConfiguration(new TipoInvestidorMaps());
             builder.ApplyConfiguration(new EnderecoMaps());
             builder.ApplyConfiguration(new AreaInvestimentoMaps());
+
+            //Seeds
+            builder.ApplyConfiguration(new AreaInvestimentoSeed());
+            builder.ApplyConfiguration(new TipoInvestidorSeed());
         }
 
     }
