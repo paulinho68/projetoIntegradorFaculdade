@@ -95,7 +95,7 @@ namespace ReversoForm.Forms
                     Hide();
                     Close();
 
-                    TelaDeExibicao novaJanela = new TelaDeExibicao(context);
+                    TelaDeExibicao novaJanela = new TelaDeExibicao();
                     novaJanela.ShowDialog();
 
                 }
