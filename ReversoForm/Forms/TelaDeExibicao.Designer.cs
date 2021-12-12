@@ -64,14 +64,14 @@ namespace ReversoForm.Forms
             // editarCadastroToolStripMenuItem
             // 
             this.editarCadastroToolStripMenuItem.Name = "editarCadastroToolStripMenuItem";
-            this.editarCadastroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarCadastroToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.editarCadastroToolStripMenuItem.Text = "Editar Perfil";
             this.editarCadastroToolStripMenuItem.Click += new System.EventHandler(this.editarCadastroToolStripMenuItem_Click);
             // 
             // excluirCadastroToolStripMenuItem
             // 
             this.excluirCadastroToolStripMenuItem.Name = "excluirCadastroToolStripMenuItem";
-            this.excluirCadastroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.excluirCadastroToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.excluirCadastroToolStripMenuItem.Text = "Excluir Perfil";
             // 
             // label1
@@ -124,6 +124,7 @@ namespace ReversoForm.Forms
             this.Controls.Add(this.menuStrip1);
             this.Name = "TelaDeExibicao";
             this.Text = "TelaDeExibicao";
+            this.Load += new System.EventHandler(this.TelaDeExibicao_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridV_Pesquisa)).EndInit();

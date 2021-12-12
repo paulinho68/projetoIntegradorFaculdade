@@ -11,9 +11,10 @@ namespace ReversoForm.Forms
         private readonly ReversoContexto _reversoContexto;
         private readonly PessoaFisica _pessoaFisica;
 
-        public TelaDeExibicao()
+        public TelaDeExibicao(ReversoContexto context)
         {
             InitializeComponent();
+            this._reversoContexto = context;
         }
 
         private void editarCadastroToolStripMenuItem_Click(object sender, EventArgs e)
@@ -41,6 +42,11 @@ namespace ReversoForm.Forms
             {
                 MessageBox.Show("Erro" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void TelaDeExibicao_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

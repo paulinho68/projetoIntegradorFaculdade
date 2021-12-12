@@ -105,7 +105,11 @@ namespace ReversoForm.Forms
                                 $"\nCidade: {txt_cdd.Text}" +
                                 $"\nEstado: {cmb_estado.Text}", "Dados Salvos");
 
+                Hide();
                 Close();
+
+                TelaDeExibicao novaJanela = new TelaDeExibicao(context);
+                novaJanela.ShowDialog();
             }
             else
             {
@@ -128,7 +132,7 @@ namespace ReversoForm.Forms
             string complemento = txt_complemento.Text.ToUpper();
             string bairro = txt_bairro.Text.ToUpper();
             string cidade = txt_cdd.Text.ToUpper();
-            //string estado = cmb_estado.Text.ToUpper();
+            string estado = cmb_estado.Text.ToUpper();
 
             bool valido = true;
             if (nome == "") valido = false;
@@ -143,7 +147,7 @@ namespace ReversoForm.Forms
             if (complemento == "") valido = false;
             if (bairro == "") valido = false;
             if (cidade == "") valido = false;
-            //if (estado == "") valido = false;
+            if (estado == "") valido = false;
             if(radioButton == "") valido = true;
 
             return valido;
