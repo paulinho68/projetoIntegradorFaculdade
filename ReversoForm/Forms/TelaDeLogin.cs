@@ -1,13 +1,18 @@
-﻿using System;
+﻿using ReversoBD;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace ReversoForm.Forms
 {
     public partial class TelaDeLogin : Form
     {
-        public TelaDeLogin()
+        ReversoContexto context;
+        public TelaDeLogin(ReversoContexto reversoContexto)
         {
             InitializeComponent();
+            this.context = reversoContexto;
         }
 
         private void TelaDeLogin_Load(object sender, EventArgs e)
@@ -30,6 +35,7 @@ namespace ReversoForm.Forms
             Close();
         }
 
+
         private bool ValidaLogin()
         {
             string usuario = txt_usuario.Text.ToUpper();
@@ -44,6 +50,14 @@ namespace ReversoForm.Forms
         private string GetUsuarioSenha(string usuario)
         {
             return "123456"; // ou buscando do banco de dados
+        }
+
+        private void btn_cadastro_Click(object sender, EventArgs e)
+        {
+            Cadastro novaJanela = new Cadastro(context);
+            Hide();
+            novaJanela.ShowDialog();
+            Close();
         }
     }
 }

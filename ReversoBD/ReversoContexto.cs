@@ -10,8 +10,8 @@ namespace ReversoBD
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql(Config.ConnectionString, new MariaDbServerVersion(Config.MariaDbVersion));
-            //optionsBuilder.UseMySql("server=localhost;database=reverso;user=root;password=", new MariaDbServerVersion("10.4.19"));
+            //optionsBuilder.UseMySql(Config.ConnectionString, new MariaDbServerVersion(Config.MariaDbVersion));
+            optionsBuilder.UseMySql("server=localhost;database=reverso;user=root;password=", new MariaDbServerVersion("10.4.19"));
         }
 
         public DbSet<Usuario> Usuario { get; set; }

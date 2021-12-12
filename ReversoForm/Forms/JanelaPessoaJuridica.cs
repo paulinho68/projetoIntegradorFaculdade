@@ -1,13 +1,16 @@
-﻿using System;
+﻿using ReversoBD;
+using System;
 using System.Windows.Forms;
 
 namespace ReversoForm.Forms
 {
     public partial class JanelaPessoaJuridica : Form
     {
-        public JanelaPessoaJuridica()
+        ReversoContexto context;
+        public JanelaPessoaJuridica(ReversoContexto context)
         {
             InitializeComponent();
+            this.context = context;
             DialogResult = DialogResult.Cancel;
         }
 
@@ -81,6 +84,11 @@ namespace ReversoForm.Forms
             if (estado == "") valido = false;
 
             return valido;
+        }
+
+        private void txt_nome_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

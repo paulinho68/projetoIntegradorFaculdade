@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Windows.Forms;
+using ReversoBD;
+using ReversoBD.Entities;
 
 namespace ReversoForm.Forms
 {
     public partial class JanelaPessoaFisica : Form
     {
-        public JanelaPessoaFisica()
+        ReversoContexto context;
+        public JanelaPessoaFisica(ReversoContexto context)
         {
             InitializeComponent();
+            this.context = context;
             DialogResult = DialogResult.Cancel;
         }
 
@@ -21,9 +25,14 @@ namespace ReversoForm.Forms
             if (ValidaPessoaFisica() == true)
             {
                 DialogResult = DialogResult.OK;
+
+                //DateTime date = DateTime.Parse(dTPicker_data.Text);
+                //var result = context.PessoaFisica.Add(new PessoaFisica { Nome = txt_Nome.Text, DataNasc = date,  });
+
                 MessageBox.Show($"Nome Completo: {txt_Nome.Text}" +
                                 $"\nCPF: {maskedT_CPF.Text} " +
                                 $"\nEmail: {txt_email.Text}" +
+                                $"\nSenha: {txt_senha.Text}" +
                                 $"\nTelefone: {maskedT_Tel.Text}" +
                                 $"\nData de Nascimento: {dTPicker_data.Text}" +
                                 $"\nCEP: {maskedT_CEP.Text}" +
@@ -48,6 +57,7 @@ namespace ReversoForm.Forms
             string nome = txt_Nome.Text.ToUpper();
             string cpf = maskedT_CPF.Text.ToUpper();
             string email = txt_email.Text.ToUpper();
+            string senha = txt_senha.Text.ToUpper();
             string telefone = maskedT_Tel.Text.ToUpper();
             string data = dTPicker_data.Text.ToUpper();
             string cep = maskedT_CEP.Text.ToUpper();
@@ -62,6 +72,7 @@ namespace ReversoForm.Forms
             if (nome == "") valido = false;
             if (cpf == "") valido = false;
             if (email == "") valido = false;
+            if (senha == "") valido = false;
             if (telefone == "") valido = false;
             if (data == "") valido = false;
             if (cep == "") valido = false;
@@ -73,6 +84,21 @@ namespace ReversoForm.Forms
             if (estado == "") valido = false;
 
             return valido;
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Nome_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

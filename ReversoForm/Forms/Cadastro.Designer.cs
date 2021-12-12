@@ -42,7 +42,7 @@ namespace ReversoForm.Forms
             this.cadastrarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(463, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1064, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -59,14 +59,14 @@ namespace ReversoForm.Forms
             // pessoaFísicaToolStripMenuItem
             // 
             this.pessoaFísicaToolStripMenuItem.Name = "pessoaFísicaToolStripMenuItem";
-            this.pessoaFísicaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pessoaFísicaToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.pessoaFísicaToolStripMenuItem.Text = "Pessoa Jurídica";
             this.pessoaFísicaToolStripMenuItem.Click += new System.EventHandler(this.pessoaFísicaToolStripMenuItem_Click);
             // 
             // pessoaJurídicaToolStripMenuItem
             // 
             this.pessoaJurídicaToolStripMenuItem.Name = "pessoaJurídicaToolStripMenuItem";
-            this.pessoaJurídicaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pessoaJurídicaToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.pessoaJurídicaToolStripMenuItem.Text = "Pessoa Física";
             this.pessoaJurídicaToolStripMenuItem.Click += new System.EventHandler(this.pessoaJurídicaToolStripMenuItem_Click);
             // 
@@ -74,13 +74,14 @@ namespace ReversoForm.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 284);
+            this.ClientSize = new System.Drawing.Size(1064, 729);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Cadastro";
             this.Text = "Cadastro";
+            this.Load += new System.EventHandler(this.Cadastro_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

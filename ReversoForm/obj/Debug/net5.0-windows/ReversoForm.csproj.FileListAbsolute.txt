@@ -81,7 +81,6 @@ D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\R
 D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoForm\bin\Debug\net5.0-windows\ReversoBD.dll
 D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoForm\bin\Debug\net5.0-windows\ReversoBD.pdb
 D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.csproj.AssemblyReference.cache
-D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.Form1.resources
 D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.csproj.GenerateResource.cache
 D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.GeneratedMSBuildEditorConfig.editorconfig
 D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.AssemblyInfoInputs.cache
@@ -91,7 +90,6 @@ D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\R
 D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ref\ReversoForm.dll
 D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.pdb
 D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.genruntimeconfig.cache
-D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.csproj.CopyComplete
 C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoForm\bin\Debug\net5.0-windows\ReversoForm.exe
 C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoForm\bin\Debug\net5.0-windows\ReversoForm.dll.config
 C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoForm\bin\Debug\net5.0-windows\ReversoForm.deps.json

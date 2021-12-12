@@ -44,7 +44,7 @@ namespace ReversoForm.Forms
             // 
             this.btn_login.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_login.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btn_login.Location = new System.Drawing.Point(247, 277);
+            this.btn_login.Location = new System.Drawing.Point(245, 287);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(72, 24);
             this.btn_login.TabIndex = 1;
@@ -56,7 +56,7 @@ namespace ReversoForm.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(92, 208);
+            this.label1.Location = new System.Drawing.Point(92, 204);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 15);
             this.label1.TabIndex = 2;
@@ -67,7 +67,7 @@ namespace ReversoForm.Forms
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(88, 256);
+            this.label2.Location = new System.Drawing.Point(88, 246);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 15);
             this.label2.TabIndex = 3;
@@ -83,7 +83,7 @@ namespace ReversoForm.Forms
             // 
             // txt_senha
             // 
-            this.txt_senha.Location = new System.Drawing.Point(137, 248);
+            this.txt_senha.Location = new System.Drawing.Point(137, 242);
             this.txt_senha.Name = "txt_senha";
             this.txt_senha.Size = new System.Drawing.Size(206, 23);
             this.txt_senha.TabIndex = 5;
@@ -102,19 +102,20 @@ namespace ReversoForm.Forms
             // btn_cadastro
             // 
             this.btn_cadastro.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_cadastro.Location = new System.Drawing.Point(161, 277);
+            this.btn_cadastro.Location = new System.Drawing.Point(155, 287);
             this.btn_cadastro.Name = "btn_cadastro";
             this.btn_cadastro.Size = new System.Drawing.Size(80, 24);
             this.btn_cadastro.TabIndex = 8;
             this.btn_cadastro.Text = "Cadastre-se";
             this.btn_cadastro.UseVisualStyleBackColor = true;
+            this.btn_cadastro.Click += new System.EventHandler(this.btn_cadastro_Click);
             // 
             // TelaDeLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(457, 343);
+            this.ClientSize = new System.Drawing.Size(501, 445);
             this.Controls.Add(this.btn_cadastro);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txt_senha);

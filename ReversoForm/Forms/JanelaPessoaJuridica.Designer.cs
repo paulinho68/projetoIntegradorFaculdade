@@ -67,6 +67,8 @@ namespace ReversoForm.Forms
             this.checkBox_TD = new System.Windows.Forms.CheckBox();
             this.btn_Salvar = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +79,7 @@ namespace ReversoForm.Forms
             this.txt_nome.Name = "txt_nome";
             this.txt_nome.Size = new System.Drawing.Size(869, 23);
             this.txt_nome.TabIndex = 0;
+            this.txt_nome.TextChanged += new System.EventHandler(this.txt_nome_TextChanged);
             // 
             // label1
             // 
@@ -144,7 +147,7 @@ namespace ReversoForm.Forms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(451, 106);
+            this.label5.Location = new System.Drawing.Point(607, 61);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 15);
             this.label5.TabIndex = 8;
@@ -152,7 +155,7 @@ namespace ReversoForm.Forms
             // 
             // maskedT_Tel
             // 
-            this.maskedT_Tel.Location = new System.Drawing.Point(453, 124);
+            this.maskedT_Tel.Location = new System.Drawing.Point(609, 79);
             this.maskedT_Tel.Mask = "(00) 0000-0000";
             this.maskedT_Tel.Name = "maskedT_Tel";
             this.maskedT_Tel.Size = new System.Drawing.Size(105, 23);
@@ -684,11 +687,30 @@ namespace ReversoForm.Forms
             this.btn_Cancel.Text = "Cancelar";
             this.btn_Cancel.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(483, 124);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(272, 23);
+            this.textBox1.TabIndex = 15;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(483, 106);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(43, 15);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "Senha:";
+            // 
             // JanelaPessoaJuridica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(890, 485);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.btn_Salvar);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.groupBox2);
@@ -757,5 +779,7 @@ namespace ReversoForm.Forms
         private System.Windows.Forms.CheckBox checkBox_TD;
         private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.Button btn_Cancel;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label15;
     }
 }

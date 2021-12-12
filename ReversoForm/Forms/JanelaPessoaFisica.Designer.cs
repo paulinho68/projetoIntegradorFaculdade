@@ -69,6 +69,8 @@ namespace ReversoForm.Forms
             this.groupBox_Perfil = new System.Windows.Forms.GroupBox();
             this.groupBox_endereco = new System.Windows.Forms.GroupBox();
             this.cmb_estado = new System.Windows.Forms.ComboBox();
+            this.txt_senha = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox_Perfil.SuspendLayout();
             this.groupBox_endereco.SuspendLayout();
             this.SuspendLayout();
@@ -118,7 +120,7 @@ namespace ReversoForm.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(448, 72);
+            this.label2.Location = new System.Drawing.Point(176, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 15);
             this.label2.TabIndex = 4;
@@ -134,10 +136,10 @@ namespace ReversoForm.Forms
             // 
             // maskedT_Tel
             // 
-            this.maskedT_Tel.Location = new System.Drawing.Point(448, 88);
+            this.maskedT_Tel.Location = new System.Drawing.Point(176, 88);
             this.maskedT_Tel.Mask = "(00) 0000-0000";
             this.maskedT_Tel.Name = "maskedT_Tel";
-            this.maskedT_Tel.Size = new System.Drawing.Size(136, 23);
+            this.maskedT_Tel.Size = new System.Drawing.Size(143, 23);
             this.maskedT_Tel.TabIndex = 6;
             // 
             // txt_Nome
@@ -146,6 +148,7 @@ namespace ReversoForm.Forms
             this.txt_Nome.Name = "txt_Nome";
             this.txt_Nome.Size = new System.Drawing.Size(881, 23);
             this.txt_Nome.TabIndex = 7;
+            this.txt_Nome.TextChanged += new System.EventHandler(this.txt_Nome_TextChanged);
             // 
             // label3
             // 
@@ -161,7 +164,7 @@ namespace ReversoForm.Forms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(160, 70);
+            this.label4.Location = new System.Drawing.Point(8, 128);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 15);
             this.label4.TabIndex = 9;
@@ -171,7 +174,7 @@ namespace ReversoForm.Forms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(8, 128);
+            this.label5.Location = new System.Drawing.Point(354, 72);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(118, 15);
             this.label5.TabIndex = 10;
@@ -179,9 +182,9 @@ namespace ReversoForm.Forms
             // 
             // txt_email
             // 
-            this.txt_email.Location = new System.Drawing.Point(160, 88);
+            this.txt_email.Location = new System.Drawing.Point(8, 146);
             this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(272, 23);
+            this.txt_email.Size = new System.Drawing.Size(311, 23);
             this.txt_email.TabIndex = 11;
             // 
             // maskedT_CEP
@@ -204,7 +207,7 @@ namespace ReversoForm.Forms
             // 
             // dTPicker_data
             // 
-            this.dTPicker_data.Location = new System.Drawing.Point(8, 144);
+            this.dTPicker_data.Location = new System.Drawing.Point(354, 88);
             this.dTPicker_data.Name = "dTPicker_data";
             this.dTPicker_data.Size = new System.Drawing.Size(248, 23);
             this.dTPicker_data.TabIndex = 14;
@@ -480,11 +483,32 @@ namespace ReversoForm.Forms
             this.cmb_estado.Size = new System.Drawing.Size(262, 23);
             this.cmb_estado.TabIndex = 26;
             // 
+            // txt_senha
+            // 
+            this.txt_senha.Location = new System.Drawing.Point(354, 146);
+            this.txt_senha.Name = "txt_senha";
+            this.txt_senha.Size = new System.Drawing.Size(248, 23);
+            this.txt_senha.TabIndex = 41;
+            this.txt_senha.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(354, 128);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(43, 15);
+            this.label15.TabIndex = 40;
+            this.label15.Text = "Senha:";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
+            // 
             // JanelaPessoaFisica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 582);
+            this.Controls.Add(this.txt_senha);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.groupBox_endereco);
             this.Controls.Add(this.groupBox_Perfil);
             this.Controls.Add(this.dTPicker_data);
@@ -555,5 +579,7 @@ namespace ReversoForm.Forms
         private System.Windows.Forms.GroupBox groupBox_Perfil;
         private System.Windows.Forms.GroupBox groupBox_endereco;
         private System.Windows.Forms.ComboBox cmb_estado;
+        private System.Windows.Forms.TextBox txt_senha;
+        private System.Windows.Forms.Label label15;
     }
 }
