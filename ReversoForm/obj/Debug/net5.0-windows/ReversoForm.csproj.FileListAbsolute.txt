@@ -126,7 +126,6 @@ C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projeto
 C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoForm\bin\Debug\net5.0-windows\ReversoBD.dll
 C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoForm\bin\Debug\net5.0-windows\ReversoBD.pdb
 C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.csproj.AssemblyReference.cache
-C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.Form1.resources
 C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.csproj.GenerateResource.cache
 C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.AssemblyInfoInputs.cache
@@ -147,3 +146,4 @@ D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\R
 D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.Forms.JanelaPessoaJuridica.resources
 D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.Forms.TelaDeLogin.resources
 D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.Properties.Resources.resources
+C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.Forms.TelaDeExibicao.resources

@@ -59,16 +59,16 @@ namespace ReversoForm.Forms
             // pessoaFísicaToolStripMenuItem
             // 
             this.pessoaFísicaToolStripMenuItem.Name = "pessoaFísicaToolStripMenuItem";
-            this.pessoaFísicaToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.pessoaFísicaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pessoaFísicaToolStripMenuItem.Text = "Pessoa Jurídica";
-            this.pessoaFísicaToolStripMenuItem.Click += new System.EventHandler(this.pessoaFísicaToolStripMenuItem_Click);
+            this.pessoaFísicaToolStripMenuItem.Click += new System.EventHandler(this.pessoaJurídicaToolStripMenuItem_Click);
             // 
             // pessoaJurídicaToolStripMenuItem
             // 
             this.pessoaJurídicaToolStripMenuItem.Name = "pessoaJurídicaToolStripMenuItem";
-            this.pessoaJurídicaToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.pessoaJurídicaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pessoaJurídicaToolStripMenuItem.Text = "Pessoa Física";
-            this.pessoaJurídicaToolStripMenuItem.Click += new System.EventHandler(this.pessoaJurídicaToolStripMenuItem_Click);
+            this.pessoaJurídicaToolStripMenuItem.Click += new System.EventHandler(this.pessoaFísicaToolStripMenuItem_Click);
             // 
             // Cadastro
             // 
