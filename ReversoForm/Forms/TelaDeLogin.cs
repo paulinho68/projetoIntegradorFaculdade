@@ -35,7 +35,6 @@ namespace ReversoForm.Forms
             Close();
         }
 
-
         private bool ValidaLogin()
         {
             string usuario = txt_usuario.Text.ToUpper();
@@ -58,6 +57,11 @@ namespace ReversoForm.Forms
             Hide();
             novaJanela.ShowDialog();
             Close();
+        }
+
+        private void txt_senha_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

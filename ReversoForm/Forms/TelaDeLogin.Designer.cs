@@ -87,6 +87,7 @@ namespace ReversoForm.Forms
             this.txt_senha.Name = "txt_senha";
             this.txt_senha.Size = new System.Drawing.Size(206, 23);
             this.txt_senha.TabIndex = 5;
+            this.txt_senha.TextChanged += new System.EventHandler(this.txt_senha_TextChanged);
             // 
             // pictureBox1
             // 
