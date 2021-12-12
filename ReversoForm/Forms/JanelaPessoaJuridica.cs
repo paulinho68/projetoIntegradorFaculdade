@@ -1,5 +1,8 @@
 ﻿using ReversoBD;
+using ReversoBD.Entities;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace ReversoForm.Forms
@@ -7,6 +10,7 @@ namespace ReversoForm.Forms
     public partial class JanelaPessoaJuridica : Form
     {
         ReversoContexto context;
+        private List<string> checkbox = new List<string>();
         public JanelaPessoaJuridica(ReversoContexto context)
         {
             InitializeComponent();
@@ -28,6 +32,73 @@ namespace ReversoForm.Forms
         {
             if (ValidaPessoaJuridica() == true)
             {
+                using (var ctx = context)
+                {
+
+
+                    Usuario usuario = new Usuario
+                    {
+                        Email = txt_email.Text,
+                        Senha = txt_senha.Text,
+                    };
+
+                    ctx.Add(usuario);
+                    ctx.SaveChanges();
+
+
+                    PessoaJuridica pessoaJuridica = new PessoaJuridica
+                    {
+                        NomeFantasia = txt_NomeFant.Text,
+                        RazaoSocial = txt_nome.Text,
+                        IdUsuario = usuario.Id,
+                        CNPJ = maskedT_CNPJ.Text,
+                        Analisado = false
+                    };
+
+                    Telefone telefone = new Telefone
+                    {
+                        Numero = maskedT_Tel.Text,
+                        IdUsuario = usuario.Id,
+                    };
+
+                    Endereco endereco = new Endereco
+                    {
+                        CEP = maskedT_CEP.Text.ToUpper(),
+                        Estado = cmb_estado.Text,
+                        Numero = Convert.ToInt32(txt_Num.Text),
+                        Complemento = txt_Complemento.Text,
+                        Cidade = txt_cidade.Text,
+                        Pais = "Brasil",
+                        Logradouro = txt_logradouro.Text,
+                        Bairro = txt_bairro.Text,
+                        IdUsuario = usuario.Id,
+                    };
+
+
+                    ctx.Add(pessoaJuridica);
+                    ctx.Add(endereco);
+                    ctx.Add(telefone);
+
+                    checkbox.ForEach(nome =>
+                    {
+                        var areaInvestimentoUsuario = new AreaInvestimentoUsuario();
+                        var areaInvestimento = context.AreaInvestimento.Where(x => x.Nome.ToUpper().Trim() == nome.ToUpper().Trim()).FirstOrDefault();
+                        areaInvestimentoUsuario.IdAreaInvestimento = areaInvestimento.Id;
+                        areaInvestimentoUsuario.IdUsuario = usuario.Id;
+
+                        ctx.AreaInvestimentoUsuario.Add(areaInvestimentoUsuario);
+                    });
+
+
+                    ctx.SaveChanges();
+
+                    Hide();
+                    Close();
+
+                    TelaDeExibicao novaJanela = new TelaDeExibicao(context);
+                    novaJanela.ShowDialog();
+
+                }
                 DialogResult = DialogResult.OK;
                 MessageBox.Show($"Nome da Empresa/Razão Social: {txt_nome.Text}" +
                                 $"\nNome Fantasia: {txt_NomeFant.Text}" +
@@ -89,6 +160,48 @@ namespace ReversoForm.Forms
         private void txt_nome_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddCheckbox(string nome)
+        {
+            if (checkbox.Contains(nome))
+            {
+                checkbox.Remove(nome);
+            }
+            else
+            {
+                checkbox.Add(nome);
+            }
+        }
+
+        private void checkBox_Cripto_CheckedChanged(object sender, EventArgs e)
+        {
+            this.AddCheckbox("Criptomoedas");
+        }
+
+        private void checkBox_TD_CheckedChanged(object sender, EventArgs e)
+        {
+            this.AddCheckbox("Tesouro Direto");
+        }
+
+        private void checkBox_FI_CheckedChanged(object sender, EventArgs e)
+        {
+            this.AddCheckbox("Fundos Imobiliários");
+        }
+
+        private void checkBox_RF_CheckedChanged(object sender, EventArgs e)
+        {
+            this.AddCheckbox("Renda Fixa");
+        }
+
+        private void checkBox_CDB_CheckedChanged(object sender, EventArgs e)
+        {
+            this.AddCheckbox("CBDs");
+        }
+
+        private void checkBox_acao_CheckedChanged(object sender, EventArgs e)
+        {
+            this.AddCheckbox("Ações");
         }
     }
 }

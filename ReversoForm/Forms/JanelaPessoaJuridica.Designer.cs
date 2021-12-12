@@ -67,7 +67,7 @@ namespace ReversoForm.Forms
             this.checkBox_TD = new System.Windows.Forms.CheckBox();
             this.btn_Salvar = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_senha = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -600,6 +600,7 @@ namespace ReversoForm.Forms
             this.checkBox_acao.TabIndex = 44;
             this.checkBox_acao.Text = "Ações";
             this.checkBox_acao.UseVisualStyleBackColor = true;
+            this.checkBox_acao.CheckedChanged += new System.EventHandler(this.checkBox_acao_CheckedChanged);
             // 
             // checkBox_CDB
             // 
@@ -611,6 +612,7 @@ namespace ReversoForm.Forms
             this.checkBox_CDB.TabIndex = 43;
             this.checkBox_CDB.Text = "CDBs";
             this.checkBox_CDB.UseVisualStyleBackColor = true;
+            this.checkBox_CDB.CheckedChanged += new System.EventHandler(this.checkBox_CDB_CheckedChanged);
             // 
             // checkBox_RF
             // 
@@ -622,6 +624,7 @@ namespace ReversoForm.Forms
             this.checkBox_RF.TabIndex = 42;
             this.checkBox_RF.Text = "Renda Fixa";
             this.checkBox_RF.UseVisualStyleBackColor = true;
+            this.checkBox_RF.CheckedChanged += new System.EventHandler(this.checkBox_RF_CheckedChanged);
             // 
             // label14
             // 
@@ -643,6 +646,7 @@ namespace ReversoForm.Forms
             this.checkBox_FI.TabIndex = 41;
             this.checkBox_FI.Text = "Fundos Imobiliários";
             this.checkBox_FI.UseVisualStyleBackColor = true;
+            this.checkBox_FI.CheckedChanged += new System.EventHandler(this.checkBox_FI_CheckedChanged);
             // 
             // checkBox_Cripto
             // 
@@ -654,6 +658,7 @@ namespace ReversoForm.Forms
             this.checkBox_Cripto.TabIndex = 39;
             this.checkBox_Cripto.Text = "Criptmoedas";
             this.checkBox_Cripto.UseVisualStyleBackColor = true;
+            this.checkBox_Cripto.CheckedChanged += new System.EventHandler(this.checkBox_Cripto_CheckedChanged);
             // 
             // checkBox_TD
             // 
@@ -665,6 +670,7 @@ namespace ReversoForm.Forms
             this.checkBox_TD.TabIndex = 40;
             this.checkBox_TD.Text = "Tesouro Direito";
             this.checkBox_TD.UseVisualStyleBackColor = true;
+            this.checkBox_TD.CheckedChanged += new System.EventHandler(this.checkBox_TD_CheckedChanged);
             // 
             // btn_Salvar
             // 
@@ -687,12 +693,12 @@ namespace ReversoForm.Forms
             this.btn_Cancel.Text = "Cancelar";
             this.btn_Cancel.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txt_senha
             // 
-            this.textBox1.Location = new System.Drawing.Point(483, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(272, 23);
-            this.textBox1.TabIndex = 15;
+            this.txt_senha.Location = new System.Drawing.Point(483, 124);
+            this.txt_senha.Name = "txt_senha";
+            this.txt_senha.Size = new System.Drawing.Size(272, 23);
+            this.txt_senha.TabIndex = 15;
             // 
             // label15
             // 
@@ -709,7 +715,7 @@ namespace ReversoForm.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(890, 485);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_senha);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.btn_Salvar);
             this.Controls.Add(this.btn_Cancel);
@@ -779,7 +785,7 @@ namespace ReversoForm.Forms
         private System.Windows.Forms.CheckBox checkBox_TD;
         private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.Button btn_Cancel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_senha;
         private System.Windows.Forms.Label label15;
     }
 }
