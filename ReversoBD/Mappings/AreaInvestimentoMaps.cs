@@ -16,7 +16,6 @@ namespace ReversoBD.Mappings
             builder.Property(x => x.Id).IsRequired().UseMySqlIdentityColumn();
             builder.Property(x => x.Nome).IsRequired().HasMaxLength(255);
             builder.HasKey(x => x.Id);
-            builder.HasMany(x => x.Usuarios).WithMany(x => x.AreasInvestimentos);
             builder.ToTable("area_investimento");
         }
     }
