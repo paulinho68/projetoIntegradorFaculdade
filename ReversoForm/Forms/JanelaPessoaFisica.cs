@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using ReversoBD;
@@ -10,6 +11,7 @@ namespace ReversoForm.Forms
     {
         ReversoContexto context;
         private string radioButton;
+        private List<string> checkbox = new List<string>();
         public JanelaPessoaFisica(ReversoContexto context)
         {
             InitializeComponent();
@@ -35,6 +37,8 @@ namespace ReversoForm.Forms
                         Senha = txt_senha.Text,
                     };
 
+                    ctx.Add(usuario);
+                    ctx.SaveChanges();
 
                     var idTipoInvestidor = context.TipoInvestidor.Where(x => x.Nome.ToUpper().Trim() == radioButton.ToUpper().Trim()).Select(x => x.Id).ToList().FirstOrDefault();
 
@@ -43,15 +47,15 @@ namespace ReversoForm.Forms
                     {
                         Nome = txt_Nome.Text,
                         DataNasc = dataNasc,
-                        Usuario = usuario,
+                        IdUsuario = usuario.Id,
                         CPF = maskedT_CPF.Text,
                         idTipoInvestidor = idTipoInvestidor
                     };
 
                     Telefone telefone = new Telefone
                     {
-                        Numero = txt_num.Text,
-                        Usuario = usuario
+                        Numero = maskedT_Tel.Text,
+                        IdUsuario = usuario.Id,
                     };
 
                     Endereco endereco = new Endereco
@@ -61,17 +65,26 @@ namespace ReversoForm.Forms
                         Numero = Convert.ToInt32(txt_num.Text),
                         Complemento = txt_complemento.Text,
                         Cidade = txt_cdd.Text,
-                        //Pais = cmb_pais.Text,
+                        Pais = "Brasil",
                         Logradouro = txt_logra.Text,
                         Bairro = txt_bairro.Text,
-                        Usuario = usuario
+                        IdUsuario = usuario.Id,
                     };
 
 
-                    ctx.Add(usuario);
                     ctx.Add(pessoaFisica);
                     ctx.Add(endereco);
                     ctx.Add(telefone);
+
+                    checkbox.ForEach(nome =>
+                    {
+                        var areaInvestimentoUsuario = new AreaInvestimentoUsuario();
+                        var areaInvestimento = context.AreaInvestimento.Where(x => x.Nome.ToUpper().Trim() == nome.ToUpper().Trim()).FirstOrDefault();
+                        areaInvestimentoUsuario.IdAreaInvestimento = areaInvestimento.Id;
+                        areaInvestimentoUsuario.IdUsuario = usuario.Id;
+
+                        ctx.AreaInvestimentoUsuario.Add(areaInvestimentoUsuario);
+                    });
 
 
                     ctx.SaveChanges();
@@ -115,7 +128,7 @@ namespace ReversoForm.Forms
             string complemento = txt_complemento.Text.ToUpper();
             string bairro = txt_bairro.Text.ToUpper();
             string cidade = txt_cdd.Text.ToUpper();
-            string estado = cmb_estado.Text.ToUpper();
+            //string estado = cmb_estado.Text.ToUpper();
 
             bool valido = true;
             if (nome == "") valido = false;
@@ -130,7 +143,7 @@ namespace ReversoForm.Forms
             if (complemento == "") valido = false;
             if (bairro == "") valido = false;
             if (cidade == "") valido = false;
-            if (estado == "") valido = false;
+            //if (estado == "") valido = false;
             if(radioButton == "") valido = true;
 
             return valido;
@@ -189,5 +202,45 @@ namespace ReversoForm.Forms
 
         }
 
+        private void AddCheckbox(string nome) {
+            if (checkbox.Contains(nome))
+            {
+                checkbox.Remove(nome);
+            }
+            else
+            {
+                checkbox.Add(nome);
+            }
+        }
+
+        private void checkBox_Cripto_CheckedChanged(object sender, EventArgs e)
+        {
+            this.AddCheckbox("Criptomoedas");
+        }
+
+        private void checkBox_TD_CheckedChanged(object sender, EventArgs e)
+        {
+            this.AddCheckbox("Tesouro Direto");
+        }
+
+        private void checkBox_FI_CheckedChanged(object sender, EventArgs e)
+        {            
+            this.AddCheckbox("Fundos Imobiliários");
+        }
+
+        private void checkBox_RF_CheckedChanged(object sender, EventArgs e)
+        {
+            this.AddCheckbox("Renda Fixa");
+        }
+
+        private void checkBox_CDB_CheckedChanged(object sender, EventArgs e)
+        {
+            this.AddCheckbox("CBDs");
+        }
+
+        private void checkBox_acao_CheckedChanged(object sender, EventArgs e)
+        {
+            this.AddCheckbox("Ações");
+        }
     }
 }

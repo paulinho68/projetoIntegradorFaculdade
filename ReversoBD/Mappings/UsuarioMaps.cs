@@ -21,7 +21,6 @@ namespace ReversoBD.Mappings
             builder.HasOne(x => x.PessoaFisica).WithOne(x => x.Usuario).HasForeignKey<PessoaFisica>(x => x.IdUsuario).OnDelete(DeleteBehavior.Restrict);
             builder.HasOne(x => x.PessoaJuridica).WithOne(x => x.Usuario).HasForeignKey<PessoaJuridica>(x => x.IdUsuario).OnDelete(DeleteBehavior.Restrict);
             builder.HasOne(x => x.Endereco).WithOne(x => x.Usuario).HasForeignKey<Endereco>(x => x.IdUsuario).OnDelete(DeleteBehavior.Restrict);
-            builder.HasMany(x => x.AreasInvestimentos).WithMany(x => x.Usuarios);
             builder.ToTable("usuario");
         }
     }

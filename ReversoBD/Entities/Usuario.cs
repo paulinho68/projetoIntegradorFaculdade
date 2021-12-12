@@ -13,7 +13,7 @@ namespace ReversoBD.Entities
         public virtual PessoaJuridica PessoaJuridica{ get; set; }
         public virtual Endereco Endereco{ get; set; }
 
-        public virtual ICollection<AreaInvestimento> AreasInvestimentos { get; set; }
+        public virtual ICollection<AreaInvestimentoUsuario> AreasInvestimentosUsuarios { get; set; }
 
     }
 }

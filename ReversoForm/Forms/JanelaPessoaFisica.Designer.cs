@@ -378,6 +378,7 @@ namespace ReversoForm.Forms
             this.checkBox_Cripto.TabIndex = 32;
             this.checkBox_Cripto.Text = "Criptmoedas";
             this.checkBox_Cripto.UseVisualStyleBackColor = true;
+            this.checkBox_Cripto.CheckedChanged += new System.EventHandler(this.checkBox_Cripto_CheckedChanged);
             // 
             // checkBox_TD
             // 
@@ -389,6 +390,7 @@ namespace ReversoForm.Forms
             this.checkBox_TD.TabIndex = 33;
             this.checkBox_TD.Text = "Tesouro Direito";
             this.checkBox_TD.UseVisualStyleBackColor = true;
+            this.checkBox_TD.CheckedChanged += new System.EventHandler(this.checkBox_TD_CheckedChanged);
             // 
             // checkBox_FI
             // 
@@ -400,6 +402,7 @@ namespace ReversoForm.Forms
             this.checkBox_FI.TabIndex = 34;
             this.checkBox_FI.Text = "Fundos Imobiliários";
             this.checkBox_FI.UseVisualStyleBackColor = true;
+            this.checkBox_FI.CheckedChanged += new System.EventHandler(this.checkBox_FI_CheckedChanged);
             // 
             // checkBox_RF
             // 
@@ -411,6 +414,7 @@ namespace ReversoForm.Forms
             this.checkBox_RF.TabIndex = 35;
             this.checkBox_RF.Text = "Renda Fixa";
             this.checkBox_RF.UseVisualStyleBackColor = true;
+            this.checkBox_RF.CheckedChanged += new System.EventHandler(this.checkBox_RF_CheckedChanged);
             // 
             // checkBox_CDB
             // 
@@ -422,6 +426,7 @@ namespace ReversoForm.Forms
             this.checkBox_CDB.TabIndex = 36;
             this.checkBox_CDB.Text = "CDBs";
             this.checkBox_CDB.UseVisualStyleBackColor = true;
+            this.checkBox_CDB.CheckedChanged += new System.EventHandler(this.checkBox_CDB_CheckedChanged);
             // 
             // checkBox_acao
             // 
@@ -433,6 +438,7 @@ namespace ReversoForm.Forms
             this.checkBox_acao.TabIndex = 37;
             this.checkBox_acao.Text = "Ações";
             this.checkBox_acao.UseVisualStyleBackColor = true;
+            this.checkBox_acao.CheckedChanged += new System.EventHandler(this.checkBox_acao_CheckedChanged);
             // 
             // groupBox_Perfil
             // 
