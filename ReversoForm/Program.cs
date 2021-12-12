@@ -2,10 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using ReversoBD;
 using ReversoBD.Tools;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ReversoForm

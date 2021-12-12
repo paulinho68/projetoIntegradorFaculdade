@@ -28,3 +28,18 @@ D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\R
 D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoBD\obj\Debug\net5.0\ref\ReversoBD.dll
 D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoBD\obj\Debug\net5.0\ReversoBD.pdb
 D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoBD\obj\Debug\net5.0\ReversoBD.genruntimeconfig.cache
+C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoBD\bin\Debug\net5.0\ReversoBD.deps.json
+C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoBD\bin\Debug\net5.0\ReversoBD.runtimeconfig.json
+C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoBD\bin\Debug\net5.0\ReversoBD.runtimeconfig.dev.json
+C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoBD\bin\Debug\net5.0\ReversoBD.dll
+C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoBD\bin\Debug\net5.0\ref\ReversoBD.dll
+C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoBD\bin\Debug\net5.0\ReversoBD.pdb
+C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoBD\obj\Debug\net5.0\ReversoBD.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoBD\obj\Debug\net5.0\ReversoBD.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoBD\obj\Debug\net5.0\ReversoBD.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoBD\obj\Debug\net5.0\ReversoBD.AssemblyInfo.cs
+C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoBD\obj\Debug\net5.0\ReversoBD.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoBD\obj\Debug\net5.0\ReversoBD.dll
+C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoBD\obj\Debug\net5.0\ref\ReversoBD.dll
+C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoBD\obj\Debug\net5.0\ReversoBD.pdb
+C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoBD\obj\Debug\net5.0\ReversoBD.genruntimeconfig.cache
