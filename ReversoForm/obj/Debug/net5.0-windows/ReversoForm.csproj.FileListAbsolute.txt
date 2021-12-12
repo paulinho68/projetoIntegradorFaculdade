@@ -147,3 +147,5 @@ D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\R
 D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.Forms.TelaDeLogin.resources
 D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.Properties.Resources.resources
 C:\Users\User\Desktop\FACULDADE\QUARTO PERÍODO\PROJETO INTEGRAL IV - SI\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.Forms.TelaDeExibicao.resources
+D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.Forms.TelaDeExibicao.resources
+D:\Projetos\Faculdade\4ºSemestre\ProjetoIntegrador\projetoIntegradorFaculdade\ReversoForm\obj\Debug\net5.0-windows\ReversoForm.csproj.CopyComplete

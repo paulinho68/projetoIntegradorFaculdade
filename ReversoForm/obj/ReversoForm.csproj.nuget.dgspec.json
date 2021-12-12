@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\FACULDADE\\QUARTO PERÍODO\\PROJETO INTEGRAL IV - SI\\projetoIntegradorFaculdade\\ReversoForm\\ReversoForm.csproj": {}
+    "D:\\Projetos\\Faculdade\\4ºSemestre\\ProjetoIntegrador\\projetoIntegradorFaculdade\\ReversoForm\\ReversoForm.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\FACULDADE\\QUARTO PERÍODO\\PROJETO INTEGRAL IV - SI\\projetoIntegradorFaculdade\\ReversoBD\\ReversoBD.csproj": {
+    "D:\\Projetos\\Faculdade\\4ºSemestre\\ProjetoIntegrador\\projetoIntegradorFaculdade\\ReversoBD\\ReversoBD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\FACULDADE\\QUARTO PERÍODO\\PROJETO INTEGRAL IV - SI\\projetoIntegradorFaculdade\\ReversoBD\\ReversoBD.csproj",
+        "projectUniqueName": "D:\\Projetos\\Faculdade\\4ºSemestre\\ProjetoIntegrador\\projetoIntegradorFaculdade\\ReversoBD\\ReversoBD.csproj",
         "projectName": "ReversoBD",
-        "projectPath": "C:\\Users\\User\\Desktop\\FACULDADE\\QUARTO PERÍODO\\PROJETO INTEGRAL IV - SI\\projetoIntegradorFaculdade\\ReversoBD\\ReversoBD.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\FACULDADE\\QUARTO PERÍODO\\PROJETO INTEGRAL IV - SI\\projetoIntegradorFaculdade\\ReversoBD\\obj\\",
+        "projectPath": "D:\\Projetos\\Faculdade\\4ºSemestre\\ProjetoIntegrador\\projetoIntegradorFaculdade\\ReversoBD\\ReversoBD.csproj",
+        "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\Faculdade\\4ºSemestre\\ProjetoIntegrador\\projetoIntegradorFaculdade\\ReversoBD\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\paulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -81,27 +80,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\FACULDADE\\QUARTO PERÍODO\\PROJETO INTEGRAL IV - SI\\projetoIntegradorFaculdade\\ReversoForm\\ReversoForm.csproj": {
+    "D:\\Projetos\\Faculdade\\4ºSemestre\\ProjetoIntegrador\\projetoIntegradorFaculdade\\ReversoForm\\ReversoForm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\FACULDADE\\QUARTO PERÍODO\\PROJETO INTEGRAL IV - SI\\projetoIntegradorFaculdade\\ReversoForm\\ReversoForm.csproj",
+        "projectUniqueName": "D:\\Projetos\\Faculdade\\4ºSemestre\\ProjetoIntegrador\\projetoIntegradorFaculdade\\ReversoForm\\ReversoForm.csproj",
         "projectName": "ReversoForm",
-        "projectPath": "C:\\Users\\User\\Desktop\\FACULDADE\\QUARTO PERÍODO\\PROJETO INTEGRAL IV - SI\\projetoIntegradorFaculdade\\ReversoForm\\ReversoForm.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\FACULDADE\\QUARTO PERÍODO\\PROJETO INTEGRAL IV - SI\\projetoIntegradorFaculdade\\ReversoForm\\obj\\",
+        "projectPath": "D:\\Projetos\\Faculdade\\4ºSemestre\\ProjetoIntegrador\\projetoIntegradorFaculdade\\ReversoForm\\ReversoForm.csproj",
+        "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\Faculdade\\4ºSemestre\\ProjetoIntegrador\\projetoIntegradorFaculdade\\ReversoForm\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\paulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0-windows7.0"
@@ -114,8 +112,8 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\FACULDADE\\QUARTO PERÍODO\\PROJETO INTEGRAL IV - SI\\projetoIntegradorFaculdade\\ReversoBD\\ReversoBD.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\FACULDADE\\QUARTO PERÍODO\\PROJETO INTEGRAL IV - SI\\projetoIntegradorFaculdade\\ReversoBD\\ReversoBD.csproj"
+              "D:\\Projetos\\Faculdade\\4ºSemestre\\ProjetoIntegrador\\projetoIntegradorFaculdade\\ReversoBD\\ReversoBD.csproj": {
+                "projectPath": "D:\\Projetos\\Faculdade\\4ºSemestre\\ProjetoIntegrador\\projetoIntegradorFaculdade\\ReversoBD\\ReversoBD.csproj"
               }
             }
           }
@@ -159,7 +157,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

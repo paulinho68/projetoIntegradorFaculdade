@@ -194,6 +194,7 @@ namespace ReversoForm.Forms
             this.maskedT_CEP.Name = "maskedT_CEP";
             this.maskedT_CEP.Size = new System.Drawing.Size(128, 23);
             this.maskedT_CEP.TabIndex = 12;
+            this.maskedT_CEP.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedT_CEP_MaskInputRejected);
             // 
             // label6
             // 
@@ -478,38 +479,11 @@ namespace ReversoForm.Forms
             // cmb_estado
             // 
             this.cmb_estado.FormattingEnabled = true;
-            this.cmb_estado.Items.AddRange(new object[] {
-            "Acre",
-            "Alagoas",
-            "Amapá",
-            "Amazonas",
-            "Bahia",
-            "Ceará",
-            "Distrito Federal",
-            "Espírito Santo",
-            "Goiás",
-            "Maranhão",
-            "Mato Grosso",
-            "Mato Grosso do Sul",
-            "Minas Gerais",
-            "Pará",
-            "Paraíba",
-            "Paraná",
-            "Pernambuco",
-            "Piauí",
-            "Rio de Janeiro",
-            "Rio Grande do Norte",
-            "Rio Grande do Sul",
-            "Rondônia",
-            "Roraima",
-            "Santa Catarina",
-            "São Paulo",
-            "Sergipe",
-            "Tocantins"});
             this.cmb_estado.Location = new System.Drawing.Point(592, 142);
             this.cmb_estado.Name = "cmb_estado";
             this.cmb_estado.Size = new System.Drawing.Size(262, 23);
             this.cmb_estado.TabIndex = 26;
+            this.cmb_estado.SelectedIndexChanged += new System.EventHandler(this.cmb_estado_SelectedIndexChanged);
             // 
             // txt_senha
             // 

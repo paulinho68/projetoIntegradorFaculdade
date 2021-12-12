@@ -26,8 +26,37 @@ namespace ReversoForm.Forms
             {
                 DialogResult = DialogResult.OK;
 
-                //DateTime date = DateTime.Parse(dTPicker_data.Text);
+                DateTime dataNasc = DateTime.Parse(dTPicker_data.Text);
                 //var result = context.PessoaFisica.Add(new PessoaFisica { Nome = txt_Nome.Text, DataNasc = date,  });
+                using (var ctx = context)
+                {
+
+                    PessoaFisica prodObject = new PessoaFisica
+                    {
+                        Nome = txt_Nome.Text,
+                        DataNasc = dataNasc
+                    };
+
+                    Usuario usuario = new Usuario
+                    {
+                        Email = txt_email.Text,
+                        Senha = txt_senha.Text,
+                    };
+
+                    Endereco endereco = new Endereco
+                    {
+                        CEP = maskedT_CEP.Text.ToUpper(),
+                        Estado = cmb_estado.Text,
+                        Numero = Convert.ToInt32(txt_num.Text),
+                        Complemento = txt_complemento.Text,
+                        Cidade = txt_cdd.Text,
+                        //Pais = cmb_pais.Text,
+                        Logradouro = txt_logra.Text,
+                        Bairro = txt_bairro.Text,
+                        Usuario = usuario
+                    };
+
+                }
 
                 MessageBox.Show($"Nome Completo: {txt_Nome.Text}" +
                                 $"\nCPF: {maskedT_CPF.Text} " +
@@ -97,6 +126,16 @@ namespace ReversoForm.Forms
         }
 
         private void txt_Nome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maskedT_CEP_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void cmb_estado_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
