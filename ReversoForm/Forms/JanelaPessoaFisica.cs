@@ -12,13 +12,13 @@ namespace ReversoForm.Forms
         ReversoContexto context;
         private string radioButton;
         private List<string> checkbox = new List<string>();
+
         public JanelaPessoaFisica(ReversoContexto context)
         {
             InitializeComponent();
             this.context = context;
             DialogResult = DialogResult.Cancel;
         }
-
 
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
@@ -108,7 +108,7 @@ namespace ReversoForm.Forms
                 Hide();
                 Close();
 
-                TelaDeExibicao novaJanela = new TelaDeExibicao(context);
+                TelaDeExibicao novaJanela = new TelaDeExibicao();
                 novaJanela.ShowDialog();
             }
             else
@@ -148,7 +148,7 @@ namespace ReversoForm.Forms
             if (bairro == "") valido = false;
             if (cidade == "") valido = false;
             if (estado == "") valido = false;
-            if(radioButton == "") valido = true;
+            if (radioButton == "") valido = true;
 
             return valido;
         }
@@ -206,7 +206,8 @@ namespace ReversoForm.Forms
 
         }
 
-        private void AddCheckbox(string nome) {
+        private void AddCheckbox(string nome)
+        {
             if (checkbox.Contains(nome))
             {
                 checkbox.Remove(nome);
@@ -228,7 +229,7 @@ namespace ReversoForm.Forms
         }
 
         private void checkBox_FI_CheckedChanged(object sender, EventArgs e)
-        {            
+        {
             this.AddCheckbox("Fundos Imobiliários");
         }
 

@@ -7,12 +7,11 @@ namespace ReversoForm.Forms
 {
     public partial class TelaDeExibicao : Form
     {
-        private readonly ReversoContexto _reversoContexto;
+        private readonly ReversoContexto _contexto = new ReversoContexto();
 
-        public TelaDeExibicao(ReversoContexto context)
+        public TelaDeExibicao()
         {
             InitializeComponent();
-            this._reversoContexto = context;
         }
 
         private void editarCadastroToolStripMenuItem_Click(object sender, EventArgs e)
@@ -32,19 +31,24 @@ namespace ReversoForm.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                DataGridV_Pesquisa.DataSource = _reversoContexto.PessoaJuridica.Where(rc => rc.NomeFantasia.ToUpper().Trim() == txt_Busca.Text.ToUpper().Trim()).ToList();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            FuncaoBotao();
         }
 
         private void TelaDeExibicao_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void FuncaoBotao()
+        {
+            try
+            {
+                DataGridV_Pesquisa.DataSource = _contexto.PessoaJuridica.Where(rc => rc.NomeFantasia.ToUpper().Trim() == txt_Busca.Text.ToUpper().Trim()).ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
