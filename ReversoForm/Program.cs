@@ -27,13 +27,14 @@ namespace ReversoForm
             try
             {
 
-            var reversoContexto = new ReversoContexto();
-            if (reversoContexto.Database.GetPendingMigrations().Any())
-            {
-                reversoContexto.Database.Migrate();
-            }
+                var reversoContexto = new ReversoContexto();
+                if (reversoContexto.Database.GetPendingMigrations().Any())
+                {
+                    reversoContexto.Database.Migrate();
+                }
                 Application.Run(new TelaDeLogin(reversoContexto));
-            }catch(Exception err)
+            }
+            catch (Exception err)
             {
                 Console.WriteLine($"Erro ao conectar com o banco de dados. {err.Message}");
             }
