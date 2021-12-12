@@ -124,7 +124,7 @@ namespace ReversoForm.Forms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "TelaDeExibicao";
-            this.Text = "TelaDeExibicao";
+            this.Text = "Buscar Empresas";
             this.Load += new System.EventHandler(this.TelaDeExibicao_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

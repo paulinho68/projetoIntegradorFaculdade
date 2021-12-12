@@ -53,15 +53,11 @@ namespace ReversoForm.Forms
 
         private void excluirCadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Sure", "Some Title", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Deseja excluir usuário?", "Confirme a opção", MessageBoxButtons.YesNo);
 
             if (dialogResult == DialogResult.Yes)
             {
-                
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //do something else
+                   
             }
         }
     }
