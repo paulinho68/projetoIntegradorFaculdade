@@ -32,23 +32,26 @@ namespace ReversoForm.Forms
             else
                 DialogResult = DialogResult.Retry;
 
-            Close();
         }
 
         private bool ValidaLogin()
         {
-            string usuario = txt_usuario.Text.ToUpper();
+            string email= txt_usuario.Text.ToUpper();
             string senha = txt_senha.Text.ToUpper();
 
-            if (senha == GetUsuarioSenha(usuario))
+            int exist = context.Usuario.Where(x => x.Email == email && x.Senha == senha).ToList().Count();
+            if(exist > 0)
+            {
+                TelaDeExibicao novaJanela = new TelaDeExibicao();
+                Hide();
+                novaJanela.ShowDialog();
                 return true;
-
-            return false;
-        }
-
-        private string GetUsuarioSenha(string usuario)
-        {
-            return "123456"; // ou buscando do banco de dados
+            }
+            else
+            {
+                MessageBox.Show("E-mail e senha incorretos, por favor tente novamente", "Erro");
+                return false;
+            }
         }
 
         private void btn_cadastro_Click(object sender, EventArgs e)
