@@ -728,7 +728,7 @@ namespace ReversoForm.Forms
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "JanelaPessoaJuridica";
-            this.Text = "JanelaPessoaJuridica";
+            this.Text = "Cadastro de Pessoa Jurídica";
             this.Load += new System.EventHandler(this.JanelaPessoaJuridica_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

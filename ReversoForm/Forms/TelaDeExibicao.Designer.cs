@@ -64,15 +64,16 @@ namespace ReversoForm.Forms
             // editarCadastroToolStripMenuItem
             // 
             this.editarCadastroToolStripMenuItem.Name = "editarCadastroToolStripMenuItem";
-            this.editarCadastroToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.editarCadastroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editarCadastroToolStripMenuItem.Text = "Editar Perfil";
             this.editarCadastroToolStripMenuItem.Click += new System.EventHandler(this.editarCadastroToolStripMenuItem_Click);
             // 
             // excluirCadastroToolStripMenuItem
             // 
             this.excluirCadastroToolStripMenuItem.Name = "excluirCadastroToolStripMenuItem";
-            this.excluirCadastroToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.excluirCadastroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.excluirCadastroToolStripMenuItem.Text = "Excluir Perfil";
+            this.excluirCadastroToolStripMenuItem.Click += new System.EventHandler(this.excluirCadastroToolStripMenuItem_Click);
             // 
             // label1
             // 
