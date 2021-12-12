@@ -186,6 +186,7 @@ namespace ReversoForm.Forms
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(311, 23);
             this.txt_email.TabIndex = 11;
+            this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
             // 
             // maskedT_CEP
             // 
@@ -329,6 +330,7 @@ namespace ReversoForm.Forms
             this.radioBtn_alto.TabStop = true;
             this.radioBtn_alto.Text = "Alto Risco";
             this.radioBtn_alto.UseVisualStyleBackColor = true;
+            this.radioBtn_alto.CheckedChanged += new System.EventHandler(this.radioBtn_alto_CheckedChanged);
             // 
             // radioBtn_medio
             // 
@@ -341,6 +343,7 @@ namespace ReversoForm.Forms
             this.radioBtn_medio.TabStop = true;
             this.radioBtn_medio.Text = "Médio Risco";
             this.radioBtn_medio.UseVisualStyleBackColor = true;
+            this.radioBtn_medio.CheckedChanged += new System.EventHandler(this.radioBtn_medio_CheckedChanged);
             // 
             // radioBtn_baixo
             // 
@@ -353,6 +356,7 @@ namespace ReversoForm.Forms
             this.radioBtn_baixo.TabStop = true;
             this.radioBtn_baixo.Text = "Baixo Risco";
             this.radioBtn_baixo.UseVisualStyleBackColor = true;
+            this.radioBtn_baixo.CheckedChanged += new System.EventHandler(this.radioBtn_baixo_CheckedChanged);
             // 
             // label14
             // 
@@ -450,6 +454,7 @@ namespace ReversoForm.Forms
             this.groupBox_Perfil.TabIndex = 38;
             this.groupBox_Perfil.TabStop = false;
             this.groupBox_Perfil.Text = "Perfil do Investidor";
+            this.groupBox_Perfil.Enter += new System.EventHandler(this.groupBox_Perfil_Enter);
             // 
             // groupBox_endereco
             // 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using ReversoBD;
 using ReversoBD.Entities;
@@ -8,6 +9,7 @@ namespace ReversoForm.Forms
     public partial class JanelaPessoaFisica : Form
     {
         ReversoContexto context;
+        private string radioButton;
         public JanelaPessoaFisica(ReversoContexto context)
         {
             InitializeComponent();
@@ -15,10 +17,6 @@ namespace ReversoForm.Forms
             DialogResult = DialogResult.Cancel;
         }
 
-        private void JanelaPessoaFisica_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
@@ -27,20 +25,33 @@ namespace ReversoForm.Forms
                 DialogResult = DialogResult.OK;
 
                 DateTime dataNasc = DateTime.Parse(dTPicker_data.Text);
-                //var result = context.PessoaFisica.Add(new PessoaFisica { Nome = txt_Nome.Text, DataNasc = date,  });
                 using (var ctx = context)
                 {
 
-                    PessoaFisica prodObject = new PessoaFisica
-                    {
-                        Nome = txt_Nome.Text,
-                        DataNasc = dataNasc
-                    };
 
                     Usuario usuario = new Usuario
                     {
                         Email = txt_email.Text,
                         Senha = txt_senha.Text,
+                    };
+
+
+                    var idTipoInvestidor = context.TipoInvestidor.Where(x => x.Nome.ToUpper().Trim() == radioButton.ToUpper().Trim()).Select(x => x.Id).ToList().FirstOrDefault();
+
+
+                    PessoaFisica pessoaFisica = new PessoaFisica
+                    {
+                        Nome = txt_Nome.Text,
+                        DataNasc = dataNasc,
+                        Usuario = usuario,
+                        CPF = maskedT_CPF.Text,
+                        idTipoInvestidor = idTipoInvestidor
+                    };
+
+                    Telefone telefone = new Telefone
+                    {
+                        Numero = txt_num.Text,
+                        Usuario = usuario
                     };
 
                     Endereco endereco = new Endereco
@@ -55,6 +66,15 @@ namespace ReversoForm.Forms
                         Bairro = txt_bairro.Text,
                         Usuario = usuario
                     };
+
+
+                    ctx.Add(usuario);
+                    ctx.Add(pessoaFisica);
+                    ctx.Add(endereco);
+                    ctx.Add(telefone);
+
+
+                    ctx.SaveChanges();
 
                 }
 
@@ -111,6 +131,7 @@ namespace ReversoForm.Forms
             if (bairro == "") valido = false;
             if (cidade == "") valido = false;
             if (estado == "") valido = false;
+            if(radioButton == "") valido = true;
 
             return valido;
         }
@@ -139,5 +160,34 @@ namespace ReversoForm.Forms
         {
 
         }
+
+        private void txt_email_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioBtn_alto_CheckedChanged(object sender, EventArgs e)
+        {
+            this.radioButton = "Alto Risco";
+        }
+        private void radioBtn_medio_CheckedChanged(object sender, EventArgs e)
+        {
+            this.radioButton = "Médio Risco";
+        }
+
+        private void radioBtn_baixo_CheckedChanged(object sender, EventArgs e)
+        {
+            this.radioButton = "Baixo Risco";
+        }
+
+        private void groupBox_Perfil_Enter(object sender, EventArgs e)
+        {
+
+        }
+        private void JanelaPessoaFisica_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
