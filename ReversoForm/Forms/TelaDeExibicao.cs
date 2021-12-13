@@ -18,7 +18,8 @@ namespace ReversoForm.Forms
 
         private void editarCadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            AtualizazaoCadastral janela = new AtualizazaoCadastral();
+            janela.ShowDialog();
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -80,8 +81,8 @@ namespace ReversoForm.Forms
                 MessageBox.Show("Usuário deletado com sucesso", "Sucesso");
                 Hide();
                 Close();
-                //TelaDeLogin novaJanela = new TelaDeLogin();
-                //novaJanela.ShowDialog();
+                TelaDeLogin novaJanela = new TelaDeLogin();
+                novaJanela.ShowDialog();
             }           
         }
     }

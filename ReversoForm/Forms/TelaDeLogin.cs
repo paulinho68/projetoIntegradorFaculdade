@@ -47,7 +47,7 @@ namespace ReversoForm.Forms
                 TelaDeExibicao novaJanela = new TelaDeExibicao();
 
                 Usuario usuario = new Usuario();
-                usuario = context.Usuario.Where(x => x.Email == email && x.Senha == senha).ToList().First();
+                usuario = _context.Usuario.Where(x => x.Email == email && x.Senha == senha).ToList().First();
 
                 UserInfo.SetEmail(usuario.Email);
                 UserInfo.SetSenha(usuario.Senha);
