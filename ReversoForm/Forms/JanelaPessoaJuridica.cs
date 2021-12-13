@@ -9,12 +9,12 @@ namespace ReversoForm.Forms
 {
     public partial class JanelaPessoaJuridica : Form
     {
-        ReversoContexto context;
+        private readonly ReversoContexto _context = new ReversoContexto();
         private List<string> checkbox = new List<string>();
-        public JanelaPessoaJuridica(ReversoContexto context)
+
+        public JanelaPessoaJuridica()
         {
             InitializeComponent();
-            this.context = context;
             DialogResult = DialogResult.Cancel;
         }
 
@@ -32,7 +32,7 @@ namespace ReversoForm.Forms
         {
             if (ValidaPessoaJuridica() == true)
             {
-                using (var ctx = context)
+                using (var ctx = _context)
                 {
 
 
@@ -82,7 +82,7 @@ namespace ReversoForm.Forms
                     checkbox.ForEach(nome =>
                     {
                         var areaInvestimentoUsuario = new AreaInvestimentoUsuario();
-                        var areaInvestimento = context.AreaInvestimento.Where(x => x.Nome.ToUpper().Trim() == nome.ToUpper().Trim()).FirstOrDefault();
+                        var areaInvestimento = _context.AreaInvestimento.Where(x => x.Nome.ToUpper().Trim() == nome.ToUpper().Trim()).FirstOrDefault();
                         areaInvestimentoUsuario.IdAreaInvestimento = areaInvestimento.Id;
                         areaInvestimentoUsuario.IdUsuario = usuario.Id;
 

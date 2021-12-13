@@ -32,7 +32,7 @@ namespace ReversoForm
                 {
                     reversoContexto.Database.Migrate();
                 }
-                Application.Run(new TelaDeLogin(reversoContexto));
+                Application.Run(new TelaDeLogin());
             }
             catch (Exception err)
             {

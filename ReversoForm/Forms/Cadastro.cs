@@ -8,11 +8,9 @@ namespace ReversoForm.Forms
 {
     public partial class Cadastro : Form
     {
-        ReversoContexto context;
-        public Cadastro(ReversoContexto context)
+        public Cadastro()
         {
             InitializeComponent();
-            this.context = context;
         }
 
         private void pessoaFísicaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -20,7 +18,7 @@ namespace ReversoForm.Forms
             List<JanelaPessoaFisica> janelasFilha = Application.OpenForms.OfType<JanelaPessoaFisica>().ToList();
             if (janelasFilha.Count() == 0)
             {
-                JanelaPessoaFisica novaJanela = new JanelaPessoaFisica(context);
+                JanelaPessoaFisica novaJanela = new JanelaPessoaFisica();
                 novaJanela.MdiParent = this;
                 novaJanela.Show();
             }
@@ -35,7 +33,7 @@ namespace ReversoForm.Forms
             List<JanelaPessoaJuridica> janelasFilha = Application.OpenForms.OfType<JanelaPessoaJuridica>().ToList();
             if (janelasFilha.Count() == 0)
             {
-                JanelaPessoaJuridica novaJanela = new JanelaPessoaJuridica(context);
+                JanelaPessoaJuridica novaJanela = new JanelaPessoaJuridica();
                 novaJanela.MdiParent = this;
                 novaJanela.Show();
             }
