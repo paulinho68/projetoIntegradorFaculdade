@@ -45,7 +45,7 @@ namespace ReversoForm.Forms
         {
             try
             {
-                DataGridV_Pesquisa.DataSource = _contexto.PessoaJuridica.Where(rc => rc.NomeFantasia.ToUpper().Trim() == txt_Busca.Text.ToUpper().Trim()).ToList();
+                DataGridV_Pesquisa.DataSource = _contexto.PessoaJuridica.Where(rc => rc.NomeFantasia.ToUpper().Trim().Contains(txt_Busca.Text.ToUpper().Trim())).ToList();
             }
             catch (Exception ex)
             {

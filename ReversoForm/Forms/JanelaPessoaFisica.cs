@@ -10,14 +10,13 @@ namespace ReversoForm.Forms
 {
     public partial class JanelaPessoaFisica : Form
     {
-        ReversoContexto context;
+        private readonly ReversoContexto _context = new ReversoContexto();
         private string radioButton;
         private List<string> checkbox = new List<string>();
 
-        public JanelaPessoaFisica(ReversoContexto context)
+        public JanelaPessoaFisica()
         {
             InitializeComponent();
-            this.context = context;
             DialogResult = DialogResult.Cancel;
         }
 
@@ -28,7 +27,7 @@ namespace ReversoForm.Forms
                 DialogResult = DialogResult.OK;
 
                 DateTime dataNasc = DateTime.Parse(dTPicker_data.Text);
-                using (var ctx = context)
+                using (var ctx = _context)
                 {
 
 
@@ -41,7 +40,7 @@ namespace ReversoForm.Forms
                     ctx.Add(usuario);
                     ctx.SaveChanges();
 
-                    var idTipoInvestidor = context.TipoInvestidor.Where(x => x.Nome.ToUpper().Trim() == radioButton.ToUpper().Trim()).Select(x => x.Id).ToList().FirstOrDefault();
+                    var idTipoInvestidor = _context.TipoInvestidor.Where(x => x.Nome.ToUpper().Trim() == radioButton.ToUpper().Trim()).Select(x => x.Id).ToList().FirstOrDefault();
 
 
                     PessoaFisica pessoaFisica = new PessoaFisica
@@ -80,7 +79,7 @@ namespace ReversoForm.Forms
                     checkbox.ForEach(nome =>
                     {
                         var areaInvestimentoUsuario = new AreaInvestimentoUsuario();
-                        var areaInvestimento = context.AreaInvestimento.Where(x => x.Nome.ToUpper().Trim() == nome.ToUpper().Trim()).FirstOrDefault();
+                        var areaInvestimento = _context.AreaInvestimento.Where(x => x.Nome.ToUpper().Trim() == nome.ToUpper().Trim()).FirstOrDefault();
                         areaInvestimentoUsuario.IdAreaInvestimento = areaInvestimento.Id;
                         areaInvestimentoUsuario.IdUsuario = usuario.Id;
 

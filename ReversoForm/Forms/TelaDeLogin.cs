@@ -10,11 +10,11 @@ namespace ReversoForm.Forms
 {
     public partial class TelaDeLogin : Form
     {
-        ReversoContexto context;
-        public TelaDeLogin(ReversoContexto reversoContexto)
+        private readonly ReversoContexto _context = new ReversoContexto();
+
+        public TelaDeLogin()
         {
             InitializeComponent();
-            this.context = reversoContexto;
         }
 
         private void TelaDeLogin_Load(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace ReversoForm.Forms
             string email= txt_usuario.Text.ToUpper();
             string senha = txt_senha.Text.ToUpper();
 
-            int exist = context.Usuario.Where(x => x.Email == email && x.Senha == senha).ToList().Count();
+            int exist = _context.Usuario.Where(x => x.Email == email && x.Senha == senha).ToList().Count();
             if(exist > 0)
             {
                 TelaDeExibicao novaJanela = new TelaDeExibicao();
@@ -66,7 +66,7 @@ namespace ReversoForm.Forms
 
         private void btn_cadastro_Click(object sender, EventArgs e)
         {
-            Cadastro novaJanela = new Cadastro(context);
+            Cadastro novaJanela = new Cadastro();
             Hide();
             novaJanela.ShowDialog();
             Close();
