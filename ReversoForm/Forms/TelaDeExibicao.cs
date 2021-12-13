@@ -1,4 +1,6 @@
 ﻿using ReversoBD;
+using ReversoBD.Entities;
+using ReversoForm.GlobalContext;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -57,8 +59,30 @@ namespace ReversoForm.Forms
 
             if (dialogResult == DialogResult.Yes)
             {
-                   
-            }
+                int Id = UserInfo.GetId();
+                Usuario usuario = new Usuario();
+                usuario = _contexto.Usuario.Where(x => x.Id == Id).ToList().First();
+
+                _contexto.AreaInvestimentoUsuario.RemoveRange(_contexto.AreaInvestimentoUsuario.Where(x => x.IdUsuario == Id).ToList());
+                _contexto.Endereco.RemoveRange(_contexto.Endereco.Where(x => x.IdUsuario == Id).ToList());
+                _contexto.Telefone.RemoveRange(_contexto.Telefone.Where(x => x.IdUsuario == Id).ToList());
+                if(_contexto.PessoaFisica.Where(x => x.IdUsuario == Id).ToList().Count > 0)
+                {
+                    _contexto.PessoaFisica.RemoveRange(_contexto.PessoaFisica.Where(x => x.IdUsuario == Id).ToList());
+                }
+                else
+                {
+                    _contexto.PessoaJuridica.RemoveRange(_contexto.PessoaJuridica.Where(x => x.IdUsuario == Id).ToList());
+                }
+                _contexto.Usuario.Remove(usuario);
+                _contexto.SaveChanges();
+
+                MessageBox.Show("Usuário deletado com sucesso", "Sucesso");
+                Hide();
+                Close();
+                //TelaDeLogin novaJanela = new TelaDeLogin();
+                //novaJanela.ShowDialog();
+            }           
         }
     }
 }

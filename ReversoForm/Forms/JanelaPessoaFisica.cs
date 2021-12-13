@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using ReversoBD;
 using ReversoBD.Entities;
+using ReversoForm.GlobalContext;
 
 namespace ReversoForm.Forms
 {
@@ -89,6 +90,9 @@ namespace ReversoForm.Forms
 
                     ctx.SaveChanges();
 
+                    UserInfo.SetEmail(usuario.Email);
+                    UserInfo.SetSenha(usuario.Senha);
+                    UserInfo.SetId(usuario.Id);
                 }
 
                 MessageBox.Show($"Nome Completo: {txt_Nome.Text}" +
@@ -107,7 +111,7 @@ namespace ReversoForm.Forms
 
                 Hide();
                 Close();
-
+                
                 TelaDeExibicao novaJanela = new TelaDeExibicao();
                 novaJanela.ShowDialog();
             }

@@ -1,5 +1,6 @@
 ﻿using ReversoBD;
 using ReversoBD.Entities;
+using ReversoForm.GlobalContext;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -87,11 +88,15 @@ namespace ReversoForm.Forms
                         areaInvestimentoUsuario.IdUsuario = usuario.Id;
 
                         ctx.AreaInvestimentoUsuario.Add(areaInvestimentoUsuario);
+
                     });
 
 
                     ctx.SaveChanges();
 
+                    UserInfo.SetEmail(usuario.Email);
+                    UserInfo.SetSenha(usuario.Senha);
+                    UserInfo.SetId(usuario.Id);
                     Hide();
                     Close();
 

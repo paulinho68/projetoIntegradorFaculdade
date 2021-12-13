@@ -1,4 +1,6 @@
 ﻿using ReversoBD;
+using ReversoBD.Entities;
+using ReversoForm.GlobalContext;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,6 +45,14 @@ namespace ReversoForm.Forms
             if(exist > 0)
             {
                 TelaDeExibicao novaJanela = new TelaDeExibicao();
+
+                Usuario usuario = new Usuario();
+                usuario = context.Usuario.Where(x => x.Email == email && x.Senha == senha).ToList().First();
+
+                UserInfo.SetEmail(usuario.Email);
+                UserInfo.SetSenha(usuario.Senha);
+                UserInfo.SetId(usuario.Id);
+
                 Hide();
                 novaJanela.ShowDialog();
                 return true;
