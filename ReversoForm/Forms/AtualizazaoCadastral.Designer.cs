@@ -30,7 +30,7 @@ namespace ReversoForm
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_nomeCompleto = new System.Windows.Forms.TextBox();
             this.groupBox_endereco = new System.Windows.Forms.GroupBox();
             this.cmb_estado = new System.Windows.Forms.ComboBox();
             this.maskedT_CEP = new System.Windows.Forms.MaskedTextBox();
@@ -61,12 +61,12 @@ namespace ReversoForm
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome Completo:";
             // 
-            // textBox1
+            // txt_nomeCompleto
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(881, 23);
-            this.textBox1.TabIndex = 4;
+            this.txt_nomeCompleto.Location = new System.Drawing.Point(12, 32);
+            this.txt_nomeCompleto.Name = "txt_nomeCompleto";
+            this.txt_nomeCompleto.Size = new System.Drawing.Size(881, 23);
+            this.txt_nomeCompleto.TabIndex = 4;
             // 
             // groupBox_endereco
             // 
@@ -260,6 +260,7 @@ namespace ReversoForm
             this.btn_Salvar.TabIndex = 41;
             this.btn_Salvar.Text = "Salvar";
             this.btn_Salvar.UseVisualStyleBackColor = true;
+            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
             // 
             // AtualizazaoCadastral
             // 
@@ -268,7 +269,7 @@ namespace ReversoForm
             this.ClientSize = new System.Drawing.Size(909, 360);
             this.Controls.Add(this.btn_Salvar);
             this.Controls.Add(this.groupBox_endereco);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_nomeCompleto);
             this.Controls.Add(this.label1);
             this.Name = "AtualizazaoCadastral";
             this.Text = "Atualização Cadatral";
@@ -300,5 +301,6 @@ namespace ReversoForm
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txt_complemento;
         private System.Windows.Forms.Button btn_Salvar;
+        private System.Windows.Forms.TextBox txt_nomeCompleto;
     }
 }
